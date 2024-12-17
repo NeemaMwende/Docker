@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # version: "3.8"
 # services:
 #   api:
@@ -42,3 +43,28 @@ services:
     volumes:
       - ./myblog:/app
       - ./app/node_modules
+=======
+version: "3.8"
+services:
+  api:
+    # image: node:14
+    build: ./api
+    container_name: api_c
+    volumes:
+      - ./api:/app
+      - ./app/node_modules
+    # working_dir: /app
+    # command: npm run dev
+    ports:
+      - '4000:4000'
+    # depends_on:
+    #   - db
+  # db:
+  #   image: postgres:14
+  #   volumes:
+  #     - ./data:/var/lib/postgresql/data
+  #   environment:
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_PASSWORD: postgres
+  #     POSTGRES_DB: postgres
+>>>>>>> 366d457f13c3ff0e8257e96cafc4355ee9d4690c
