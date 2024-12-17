@@ -1,3 +1,49 @@
+<<<<<<< HEAD
+# version: "3.8"
+# services:
+#   api:
+#     build: ./api
+#     container_name: api_c
+#     ports:
+#       - '4000:4000'
+#     volumes:
+#       - ./api:/app
+#       - ./app/node_modules
+#   myblog:
+#     build: ./myblog
+#     container_name: myblog_c
+#     ports:
+#       - '3000:3000'
+#     stdin_open: true
+#     volumes:
+#       - ./myblog:/app
+#       - ./app/node_modules
+#     tty: true
+
+version: "3.8"
+services:
+  api:
+    build: ./api
+    container_name: api_c
+    ports:
+      - '4000:4000'
+    volumes:
+      - ./api:/app
+      - ./app/node_modules
+
+  myblog:
+    build: ./myblog
+    container_name: myblog_c
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true
+    depends_on:
+      - api
+    volumes:
+      - ./myblog:/app
+      - ./app/node_modules
+=======
 version: "3.8"
 services:
   api:
@@ -21,3 +67,4 @@ services:
   #     POSTGRES_USER: postgres
   #     POSTGRES_PASSWORD: postgres
   #     POSTGRES_DB: postgres
+>>>>>>> 366d457f13c3ff0e8257e96cafc4355ee9d4690c
