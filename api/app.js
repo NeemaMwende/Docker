@@ -9,17 +9,17 @@ app.get('/', (req, res) => {
   res.json([
     {
       "id":"1",
-      "title":"Book Review: The Name of the Wind",
+      "title":"Book Review: The Bear & The Nightingale",
       "author":"Madeline Miller"
     },
     {
       "id":"2",
-      "title":"Game Review: Pokemon Brillian Diamond",
+      "title":"Game Review: Pokemon Brillian Diamond.",
       "author":"Madeline Miller"
     },
     {
       "id":"3",
-      "title":"Show Review: Alice in Borderland",
+      "title":"Show Review: Alice in Borderland.",
       "author":"Madeline Miller"
     }
   ])
